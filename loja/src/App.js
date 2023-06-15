@@ -1,20 +1,20 @@
-import Filter from "./components/Filters/Filter";
-import Home from "./components/ProductList/Home/Home";
-import ProductCard from "./components/ProductList/ProductCard/ProductCard";
-import Cart from "./components/ShoppingCart/Cart/Cart";
-import Item from "./components/ShoppingCart/item/Item";
 
+import Header from "./components/Header/Header";
+import Home from "./components/ProductList/Home/Home";
+
+
+
+import {Div} from './AppStyle'
 function App() {
   
   return (
-    <div>
-        <Home />
-        <Item />
-        <ProductCard />
-        <Filter />
-        <Cart />
+    <Div> 
         
-    </div>
+        <Header />
+        <Home />
+       
+        
+    </Div>
   );
 }
 

@@ -1,20 +1,16 @@
-
-import Header from "./components/Header/Header";
-import Home from "./components/ProductList/Home/Home";
+import Home from "./pages/Home";
 
 
 
-import {Div} from './AppStyle'
+
+
 function App() {
   
   return (
-    <Div> 
-        
-        <Header />
-        <Home />
+    <div> 
        
-        
-    </Div>
+        <Home />
+    </div>
   );
 }
 

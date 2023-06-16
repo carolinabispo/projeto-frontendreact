@@ -8,6 +8,8 @@ export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState('')
+
 
 
   /* USEEFFECT QUE FAZ RENDERIÇÃO DO MEU ARRAY DE PRODUTOS */
@@ -24,7 +26,7 @@ const ProductProvider = ({ children }) => {
 
   return (
     <ProductContext.Provider
-      value={{ products}}
+      value={{ products,search,setSearch}}
     >
       {children}
     </ProductContext.Provider>

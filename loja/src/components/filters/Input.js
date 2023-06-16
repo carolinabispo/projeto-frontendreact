@@ -13,7 +13,6 @@ const Input = () => {
       <Div>
         <InputBox
           type="search"
-          className="bg-purple-white shadow rounded border-0 p-3"
           placeholder="Por ex: nave espacial"
           value={search}
           onChange={(e)=>setSearch(e.target.value)}

@@ -1,13 +1,11 @@
 import React from 'react'
-import Filter from './Filters/Filter'
-import Cart from '../ShoppingCart/Cart/Cart'
+import logo from '../../../utils/logo.jpg'
+
 
 const Header = () => {
   return (
     <div>
-        <h1>HEADER</h1>
-        <Cart />
-        <Filter />
+      
     </div>
   )
 }

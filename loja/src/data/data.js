@@ -15,7 +15,7 @@ const data = [
     {
       name: "Miniatura Nave Espacial R.R.W. Vastam - Nº 06 - Star Trek",
       id: 1,
-      category: "Nave-Espacial",
+      category: "NaveEspacial",
       price: 69.99,
       storage: 3,
       description:
@@ -25,7 +25,7 @@ const data = [
     {
       name: "Miniatura Nave Espacial Modern Raptor",
       id: 2,
-      category: "Nave-Espacial",
+      category: "NaveEspacial",
       price: 149.99,
       storage: 10,
       description:
@@ -35,7 +35,7 @@ const data = [
     {
       name: "Miniatura Nave Espacial Jem'Hadar Vanguard Carrier - Nº 08 - Star Trek ",
       id: 3,
-      category: "Nave-Espacial",
+      category: "NaveEspacial",
       price: 199.99,
       storage: 60,
       description:
@@ -45,7 +45,7 @@ const data = [
     {
       name: "Miniatura Nave Espacial I.K.S. Mogh - Nº 10 - Star Trek",
       id: 4,
-      category: "Nave-Espacial",
+      category: "NaveEspacial",
       price: 259.99,
       storage: 68,
       description:

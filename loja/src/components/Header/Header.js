@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../utils/logo.jpg'
-import { ProductContext } from '../../hooks/useProductContext'
+// import { ProductContext } from '../../hooks/useProductContext'
 import {Nav,DivImg,Img,Ul,LiInput,DivInput,Li,DivLi} from './HeaderStyle'
-import Input from '../filters/Input'
+import SearchBar from '../filters/searchBar/SearchBar'
+import Cart from '../cart/Cart'
+
 
 
 const Header = () => {
+ 
   return (
     <div>
       <header>
@@ -20,7 +23,7 @@ const Header = () => {
             <Ul className='lg:flex flex-1'>
               <LiInput>
                   <DivInput>
-                    <Input />
+                    <SearchBar />
                   </DivInput>
               </LiInput>
               <Li>
@@ -36,6 +39,11 @@ const Header = () => {
               <Li>
                 <DivLi>
                   Contato
+                </DivLi>
+              </Li>
+              <Li>
+                <DivLi>
+                  <Cart />
                 </DivLi>
               </Li>
             </Ul>

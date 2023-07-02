@@ -8,7 +8,7 @@ const SelectMenu = () => {
     <Div>
       <div>
         <SelectDiv>
-          <Select
+          <Select 
             name="filter-category"
             id="filters"
             value={searchCategory}
@@ -22,6 +22,8 @@ const SelectMenu = () => {
         </SelectDiv>
       </div>
     </Div>
+  
+   
   );
 };
 

@@ -5,11 +5,12 @@ export const Nav = styled.nav`
     justify-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: white;
+   background-color: #111827;
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+    
     padding: 1rem;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     top: 0px;
 `
 
@@ -18,17 +19,20 @@ export const DivImg = styled.div`
     justify-items: center;
     color: rgb(255 255 255);
     margin-left: 0.75rem;
+    cursor: pointer;
 `
 
 export const Img = styled.img`
 height: 6rem;
 width: 6rem;
+border-radius: 2rem;
 `
 
 export const Ul = styled.ul`
-    justify-content: flex-end;
+    justify-content:center;
     align-items: center;
-
+    flex-direction: row;
+    
 
 `
 
@@ -39,7 +43,7 @@ export const Li = styled.li`
 
 export const DivLi = styled.li`
     display: inline-block;
-    color: rgb(3 7 18 );
+    color: #ffffff;
     text-decoration-line: none;
     &:hover{
         color: rgb(229 231 235)
@@ -64,10 +68,19 @@ export const DivInput = styled.div`
     margin-left: auto;
     margin-right: auto;
     color: rgb(75 85 99);
+    
 
 `
 
-export const Input = styled.input`
-
+export const Menu = styled.button`
+    display: flex;
+    justify-items: center;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    padding-top: 0.5rem/* 8px */;
+    padding-bottom: 0.5rem/* 8px */;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-color: rgb(107 114 128 )
 
 `

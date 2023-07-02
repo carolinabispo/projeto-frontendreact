@@ -12,7 +12,10 @@ const ProductProvider = ({ children }) => {
   const [searchCategory, setSearchCategory] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [items, setitems] = useState('')
 
+
+  
   /* USEEFFECT QUE FAZ RENDERIÇÃO DO MEU ARRAY DE PRODUTOS */
   useEffect(() => {
     setProducts(data);
@@ -28,7 +31,7 @@ const ProductProvider = ({ children }) => {
     if (searchCategory === "NaveEspacial") {
       return product.category.includes(searchCategory);
     } else if (searchCategory === "Foguetes") {
-      return products.category.includes(searchCategory);
+      return product.category.includes(searchCategory);
     } else if (searchCategory === "Canecas") {
       return product.category.includes(searchCategory);
     } else {
@@ -38,37 +41,57 @@ const ProductProvider = ({ children }) => {
 
   //FUNÇÃO FILTER PRICE
 
-
-
   const filteredPrice = (product) => {
-    if(minPrice && maxPrice){
-      return product.price >= minPrice && product.price <= maxPrice
-    }else if(minPrice){
-      return product.price >= minPrice
-    }else if(maxPrice){
-      return product.price <= maxPrice
+    if (minPrice && maxPrice) {
+      return product.price >= minPrice && product.price <= maxPrice;
+    } else if (minPrice) {
+      return product.price >= minPrice;
+    } else if (maxPrice) {
+      return product.price <= maxPrice;
     }
-    return product
+    return product;
   };
 
+  // const handleAddCart = (data) => {
+  //   setCartItens([...products, data]);
+  // };
+
+  // const initialProductsAdded = localStorage.getItem('productsAdded')
+  // // guarda produtos no local storage
+
+  // const [productsAdded, setProductsAdded] = useState(JSON.parse(initialProductsAdded) || [])
+  // // cria array um array vazio ja guardando no local storage
+
+  // const [total, setTotal] = useState(0)
+  // // const pra somar o valor
+
+  // const addProductsCart = (product) => {
+
+  //   const newProdutcsAdded = productsAdded.concat({ ...product, amount: 1 })
+
+  //   setProductsAdded(newProdutcsAdded)
+  // }
+
+  const value = {
+    products,
+    searchProducts,
+    setSearchProducts,
+    searchName,
+    searchCategory,
+    setSearchCategory,
+    filterCategory,
+    minPrice,
+    maxPrice,
+    setMinPrice,
+    setMaxPrice,
+    filteredPrice,
+   items,setitems
+  };
 
   return (
     <ProductContext.Provider
-      value={{
-        products,
-        searchProducts,
-        setSearchProducts,
-        searchName,
-        searchCategory,
-        setSearchCategory,
-        filterCategory,
-        minPrice,
-        maxPrice,
-        setMinPrice,
-        setMaxPrice,
-filteredPrice
-        
-      }}
+      //value correspondente a linha 52
+      value={value}
     >
       {children}
     </ProductContext.Provider>

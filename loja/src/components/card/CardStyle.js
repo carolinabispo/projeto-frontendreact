@@ -6,6 +6,7 @@ export const Div = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   height: 50%;
+  background-color: #DBEAFE;
 `;
 
 export const DivCard = styled.div`

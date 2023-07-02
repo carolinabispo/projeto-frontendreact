@@ -11,7 +11,7 @@ const Input = () => {
       <Div>
         <InputBox
           type="search"
-          placeholder="Por ex: nave espacial"
+          placeholder="Pesquise por: "
           onChange={(e) => setSearchProducts(e.target.value)}
           value={searchProducts}
         />

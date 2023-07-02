@@ -14,21 +14,22 @@ import {
 import SelectMenu from "../filters/selectMenu/SelectMenu";
 import FilterPrice from "../filters/filterPrice/FilterPrice";
 import formatCurrency from "../../utils/formatCurrency";
+
 const Card = () => {
-  const { products, searchName, filterCategory,filteredPrice } =
+  const { products, searchName, filterCategory, filteredPrice } =
     useContext(ProductContext);
+  console.log(products);
 
   return (
     <>
       <SelectMenu />
       <FilterPrice />
-      <Div classNameName="flex flex-wrap h-2/4 justify-center ">
+      <Div className="flex flex-wrap h-2/4 justify-center">
         {products
           .filter(filterCategory)
           .filter(searchName)
- .filter(filteredPrice)
+          .filter(filteredPrice)
           .map((item) => (
-            
             <DivCard key={item.id}>
               <DivImg>
                 <StyledImg src={item.image} alt="imagem-do-produto" />
@@ -40,8 +41,8 @@ const Card = () => {
                 </DivName>
               </ContainerOne>
               <ContainerTwo>
-                <Span>{formatCurrency(item.price, 'BRL')}</Span>
-                <DivButton>Add to cart</DivButton>
+                <Span>{formatCurrency(item.price, "BRL")}</Span>
+                <DivButton>Adicionar ao carrinho</DivButton>
               </ContainerTwo>
             </DivCard>
           ))}

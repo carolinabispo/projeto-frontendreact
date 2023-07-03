@@ -14,12 +14,13 @@ import {
 import SelectMenu from "../filters/selectMenu/SelectMenu";
 import FilterPrice from "../filters/filterPrice/FilterPrice";
 import formatCurrency from "../../utils/formatCurrency";
+import { CartContext } from "../../hooks/CartContext";
 
-const Card = () => {
+const Card = ({product}) => {
   const { products, searchName, filterCategory, filteredPrice } =
     useContext(ProductContext);
-  console.log(products);
-
+  const {addCart} = useContext(CartContext)
+  const {price, name, imagem, category, discription, id} = product
   return (
     <>
       <SelectMenu />
@@ -40,9 +41,9 @@ const Card = () => {
                   <h3>{item.description}</h3>
                 </DivName>
               </ContainerOne>
-              <ContainerTwo>
+              <ContainerTwo onClick={()=>addCart(product,id)}>
                 <Span>{formatCurrency(item.price, "BRL")}</Span>
-                <DivButton>Adicionar ao carrinho</DivButton>
+                <DivButton >  Adicionar ao carrinho</DivButton>
               </ContainerTwo>
             </DivCard>
           ))}

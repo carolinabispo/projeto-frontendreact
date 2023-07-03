@@ -29,7 +29,7 @@ border-radius: 2rem;
 `
 
 export const Ul = styled.ul`
-    justify-content:center;
+    justify-content:flex-end;
     align-items: center;
     flex-direction: row;
     

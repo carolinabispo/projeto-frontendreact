@@ -70,7 +70,7 @@ export const Span = styled.span`
   cursor: text;
 `;
 
-export const DivButton = styled.div`
+export const DivButton = styled.button`
   display: flex;
   align-items: center;
   border-radius: 0.375rem /* 6px */;

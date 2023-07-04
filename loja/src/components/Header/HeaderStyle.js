@@ -16,6 +16,7 @@ export const Nav = styled.nav`
 
 export const DivImg = styled.div`
     display: flex;
+   
     justify-items: center;
     color: rgb(255 255 255);
     margin-left: 0.75rem;
@@ -29,7 +30,7 @@ border-radius: 2rem;
 `
 
 export const Ul = styled.ul`
-    justify-content:center;
+    justify-content:flex-end;
     align-items: center;
     flex-direction: row;
     

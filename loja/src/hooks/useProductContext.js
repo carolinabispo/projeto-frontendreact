@@ -12,10 +12,8 @@ const ProductProvider = ({ children }) => {
   const [searchCategory, setSearchCategory] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [items, setitems] = useState('')
+  const [items, setitems] = useState("");
 
-
-  
   /* USEEFFECT QUE FAZ RENDERIÇÃO DO MEU ARRAY DE PRODUTOS */
   useEffect(() => {
     setProducts(data);
@@ -52,26 +50,6 @@ const ProductProvider = ({ children }) => {
     return product;
   };
 
-  // const handleAddCart = (data) => {
-  //   setCartItens([...products, data]);
-  // };
-
-  // const initialProductsAdded = localStorage.getItem('productsAdded')
-  // // guarda produtos no local storage
-
-  // const [productsAdded, setProductsAdded] = useState(JSON.parse(initialProductsAdded) || [])
-  // // cria array um array vazio ja guardando no local storage
-
-  // const [total, setTotal] = useState(0)
-  // // const pra somar o valor
-
-  // const addProductsCart = (product) => {
-
-  //   const newProdutcsAdded = productsAdded.concat({ ...product, amount: 1 })
-
-  //   setProductsAdded(newProdutcsAdded)
-  // }
-
   const value = {
     products,
     searchProducts,
@@ -85,7 +63,8 @@ const ProductProvider = ({ children }) => {
     setMinPrice,
     setMaxPrice,
     filteredPrice,
-   items,setitems
+    items,
+    setitems,
   };
 
   return (

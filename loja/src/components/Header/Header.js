@@ -11,27 +11,36 @@ import { CartContext } from "../../hooks/CartContext";
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SideBarContext);
   const { amount } = useContext(CartContext);
-
-  const toogleNav = () => {
+  const toogleNav = () =>{
     setIsOpen(!isOpen);
+  }
+
+  const toogleNavCart = () => {
+    setIsOpen(isOpen);
   };
   return (
     <header>
       <Nav>
+      
         <DivImg>
+          
           <div>
             <span>
               <Link to="/cards">
                 <Img src={logo} alt="logo foguete pequeno com um fundo roxo" />
               </Link>
             </span>
+            
           </div>
+          
         </DivImg>
-
+        <div className="flex justify-start ml-10 items-center"><SearchBar /></div>
         <div className="lg:hidden bg-white h-10 rounded-sm border-none">
+        
           <Menu onClick={toogleNav}>
             {""}
-            <HiMenu size={23} /> {""}
+            ({amount})
+            <BsFillCartFill size={23} /> {""}
           </Menu>
         </div>
         <div
@@ -42,7 +51,7 @@ const Header = () => {
           <ul className=" lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
               <div className="pt-2 relative mx-auto text-gray-600">
-                <SearchBar />
+                
                 <button
                   type="submit"
                   className="absolute right-0 top-0 mt-5 mr-4"
@@ -53,7 +62,7 @@ const Header = () => {
             <li className="mr-3">
               <div
                 className="inline-block text-white	 no-underline hover:text-blue-200 ease-in-out  py-2 px-4 cursor-pointer"
-                onClick={toogleNav}
+                onClick={toogleNavCart}
               >
                 ({amount})
                 <BsFillCartFill size={20} />

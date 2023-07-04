@@ -16,6 +16,7 @@ export const Nav = styled.nav`
 
 export const DivImg = styled.div`
     display: flex;
+   
     justify-items: center;
     color: rgb(255 255 255);
     margin-left: 0.75rem;

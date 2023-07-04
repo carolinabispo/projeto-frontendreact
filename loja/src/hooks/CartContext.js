@@ -85,23 +85,22 @@ const CartProvider = ({ children }) => {
       });
       setCart(newCart);
     }
-
-  }
-    const value = {
-      cart,
-      addCart,
-      removeCart,
-      clearCart,
-      increaseAmount,
-      decreaseAmount,
-      amount,
-      total,
-    };
-
-    return (
-      <CartContext.Provider value={value}>{children}</CartContext.Provider>
-    );
+    if (cartItem.amount < 2) {
+      removeCart(id);
+    }
+  };
+  const value = {
+    cart,
+    addCart,
+    removeCart,
+    clearCart,
+    increaseAmount,
+    decreaseAmount,
+    amount,
+    total,
   };
 
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
 
 export default CartProvider;

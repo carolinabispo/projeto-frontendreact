@@ -3,7 +3,6 @@ import { Nav, DivImg, Img, Menu } from "./HeaderStyle";
 import SearchBar from "../filters/searchBar/SearchBar";
 import { BsFillCartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { HiMenu } from "react-icons/hi";
 import { useContext } from "react";
 import { SideBarContext } from "../../hooks/SideBarContext";
 import { CartContext } from "../../hooks/CartContext";

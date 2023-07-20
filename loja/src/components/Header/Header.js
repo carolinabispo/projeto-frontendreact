@@ -3,7 +3,6 @@ import { Nav, DivImg, Img, Menu } from "./HeaderStyle";
 import SearchBar from "../filters/searchBar/SearchBar";
 import { BsFillCartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { HiMenu } from "react-icons/hi";
 import { useContext } from "react";
 import { SideBarContext } from "../../hooks/SideBarContext";
 import { CartContext } from "../../hooks/CartContext";
@@ -62,6 +61,7 @@ const Header = () => {
                 className="inline-block text-white	 no-underline hover:text-blue-200 ease-in-out  py-2 px-4 cursor-pointer"
                 onClick={toogleNav}
               >
+                 
                 ({amount})
                 <BsFillCartFill size={20} />
               </div>

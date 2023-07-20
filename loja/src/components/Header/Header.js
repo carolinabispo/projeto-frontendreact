@@ -61,8 +61,9 @@ const Header = () => {
             <li className="mr-3">
               <div
                 className="inline-block text-white	 no-underline hover:text-blue-200 ease-in-out  py-2 px-4 cursor-pointer"
-                onClick={toogleNavCart}
+                onClick={toogleNav}
               >
+                 
                 ({amount})
                 <BsFillCartFill size={20} />
               </div>
